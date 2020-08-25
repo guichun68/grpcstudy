@@ -1,4 +1,4 @@
-module grpcstudy/demo9/server
+module grpcstudy/demo09/server
 
 go 1.13
 

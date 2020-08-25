@@ -2,8 +2,8 @@ package main
 
 import (
 	"google.golang.org/grpc"
-	"grpcstudy/demo8/server/helper"
-	"grpcstudy/demo8/server/services"
+	"grpcstudy/demo08/server/helper"
+	"grpcstudy/demo08/server/services"
 	"log"
 	"net"
 )

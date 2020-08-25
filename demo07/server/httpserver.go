@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"google.golang.org/grpc"
-	"grpcstudy/demo7/server/services"
+	"grpcstudy/demo07/server/services"
 	"log"
 	"net/http"
 )
@@ -26,7 +26,7 @@ func main() {
 		})*/
 	opt := []grpc.DialOption{grpc.WithInsecure()}
 	//opt := []grpc.DialOption{grpc.WithTransportCredentials(creds)}
-	//8081是对应的grpc的监听端口，必须与grpc开放的端口一致,所以启动前务必启动grpc服务
+	//8099是对应的grpc的监听端口，必须与grpc开放的端口一致,所以启动前务必启动grpc服务
 	err := services.RegisterProdServiceHandlerFromEndpoint(ctx, gwmux, "localhost:8099", opt)
 	if err != nil {
 		log.Fatal(err)

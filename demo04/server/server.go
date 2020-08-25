@@ -3,7 +3,7 @@ package main
 import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
-	"grpcstudy/demo4/server/services"
+	"grpcstudy/demo04/server/services"
 	"log"
 	"net"
 )

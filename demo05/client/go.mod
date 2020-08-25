@@ -1,4 +1,4 @@
-module grpcstudy/demo5/client
+module grpcstudy/demo05/client
 
 go 1.13
 

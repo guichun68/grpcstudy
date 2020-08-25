@@ -5,7 +5,7 @@ import (
 	"crypto/x509"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
-	"grpcstudy/demo6/server/services"
+	"grpcstudy/demo06/server/services"
 	"io/ioutil"
 	"net"
 )

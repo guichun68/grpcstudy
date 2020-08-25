@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"google.golang.org/grpc"
-	services "grpcstudy/demo3/client/service"
+	services "grpcstudy/demo03/client/service"
 	"log"
 )
 

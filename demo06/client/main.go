@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
-	services "grpcstudy/demo6/client/service"
+	services "grpcstudy/demo06/client/service"
 	"io/ioutil"
 	"log"
 )

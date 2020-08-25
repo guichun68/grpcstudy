@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"google.golang.org/grpc"
-	"grpcstudy/demo9/client/helper"
-	. "grpcstudy/demo9/client/service"
+	"grpcstudy/demo09/client/helper"
+	. "grpcstudy/demo09/client/service"
 	"log"
 )
 

@@ -2,7 +2,7 @@ package main
 
 import (
 	"google.golang.org/grpc"
-	"grpcstudy/demo2/server/services"
+	"grpcstudy/demo02/server/services"
 	"net"
 )
 

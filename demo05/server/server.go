@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
-	"grpcstudy/demo5/server/services"
+	"grpcstudy/demo05/server/services"
 	"log"
 	"net/http"
 )
