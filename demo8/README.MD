@@ -7,3 +7,15 @@
 
 * repeated 是一个修饰符，返回字段可以重复任意多次（包括0次）
 可以认为就是一个数组（切片）
+
+
+* 启动服务端
+```bash
+cd server
+go run server.go
+```
+* 启动客户端连接并查询
+```bash
+cd client
+go run main.go
+```
