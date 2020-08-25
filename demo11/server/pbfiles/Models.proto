@@ -1,0 +1,19 @@
+syntax = "proto3";
+package services;
+import "google/protobuf/timestamp.proto";
+
+//商品模型
+message ProdModel{
+  int32 prod_id = 1;//商品id
+  string prod_name = 2;//商品名
+  float prod_price = 3;//商品价格
+}
+
+//主订单模型
+message OrderMain{
+  int32 order_id = 1;//订单id，数字自增
+  string order_no = 2; //订单号
+  int32 user_id = 3; //购买者ID
+  float order_money = 4; //商品金额
+  google.protobuf.Timestamp order_time = 5;//订单时间
+}

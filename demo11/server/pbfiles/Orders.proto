@@ -1,0 +1,13 @@
+syntax = "proto3";
+package services;
+import "google/api/annotations.proto";
+import "Models.proto";
+
+message OrderResponse{
+  string status = 1;
+  string message = 2;
+}
+
+service OrderService{
+  rpc NewOrder(OrderMain) returns (OrderResponse){}
+}
