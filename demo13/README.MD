@@ -9,9 +9,10 @@
 ```bash
 cd server
 go run server.go
+# switch another terminal
+go run httpserver.go
 ```
-* 启动客户端连接并查询
+* POST查询（或使用postman请求）
 ```bash
-cd client
-go run main.go
+curl -H "Content-Type: application/json" -X POST -d '{"order_id":34,"order_no":"bj00123456","user_id":8901,"order_money":34.12}' "http://localhost:8080/v1/orders"
 ```
