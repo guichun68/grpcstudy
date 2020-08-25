@@ -1,5 +1,5 @@
 ```bash
 cd server/pbfiles  
-protoc --go_out=../service/ Prod.proto
+protoc --go_out=../services/ Prod.proto
 ```
 
