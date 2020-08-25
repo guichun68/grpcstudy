@@ -25,6 +25,10 @@ $ openssl
 > x509 -req -sha256 -CA ca.pem -CAkey ca.key -CAcreateserial -days 3650 -in client.csr -out client.pem
 ```
 
+* 拷贝ca.pem、server.key、server.pem到server/cert目录
+* 拷贝ca.pem、client.key、client.pem到client/cert目录
+
+
 * 启动服务端
 ```bash
 cd server
