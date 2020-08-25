@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package services;
+import "google/api/annotations.proto";
+
+message ProdRequest{
+  int32 prod_id= 1;//传入的商品id
+}
+message ProdResponse{
+  int32 prod_stock= 1; //商品库存
+}
+
+message QuerySize{
+  int32 size = 1; //页尺寸
+}
+message ProdResponseList{//返回一堆商品库存，使用了repeated修饰符
+  repeated ProdResponse prodres = 1;
+}
+
+service ProdService{
+  rpc GetProdStock(ProdRequest) returns (ProdResponse){
+    option (google.api.http) = {
+      get: "/v1/prod/{prod_id}"
+    };
+  }
+  rpc GetProdStocks(QuerySize)returns (ProdResponseList){}
+}

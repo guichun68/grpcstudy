@@ -23,9 +23,9 @@ func GetServerCreds() credentials.TransportCredentials{
 //获取客户端证书配置
 func GetClientCreds() credentials.TransportCredentials{
 
-	cert, _ := tls.LoadX509KeyPair("demo7/client/cert/client.pem","demo7/client/cert/client.key")
+	cert, _ := tls.LoadX509KeyPair("cert/client.pem","cert/client.key")
 	certPool := x509.NewCertPool()
-	ca, _ := ioutil.ReadFile("demo7/client/cert/ca.pem")
+	ca, _ := ioutil.ReadFile("cert/ca.pem")
 	certPool.AppendCertsFromPEM(ca)
 
 	creds := credentials.NewTLS(&tls.Config{
