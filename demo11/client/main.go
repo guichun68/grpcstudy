@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/golang/protobuf/ptypes"
+	"github.com/golang/protobuf/ptypes/timestamp"
 	"google.golang.org/grpc"
 	"grpcstudy/demo11/client/helper"
 	. "grpcstudy/demo11/client/service"
@@ -19,10 +19,16 @@ func main() {
 	}
 	defer conn.Close()
 	orderClient := NewOrderServiceClient(conn)
+
 	timeGo := time.Now()
-	timeProto, err := ptypes.TimestampProto(timeGo)
+	/*timeProto, err := ptypes.TimestampProto(timeGo)
 	if err != nil {
 		fmt.Println(err)
+	}*/
+	timeProto:=&timestamp.Timestamp{Seconds:timeGo.Unix()}
+	res, err := orderClient.NewOrder(context.Background(), &OrderMain{OrderId: 31456, OrderNo: "bj009", UserId: 2048, OrderMoney: 349.90, OrderTime: timeProto})
+	if err != nil{
+		log.Fatal(err)
 	}
-	orderClient.NewOrder(context.Background(), &OrderMain{OrderId: 31456, OrderNo: "bj009", UserId: 2048, OrderMoney: 349.90, OrderTime: timeProto})
+	fmt.Println(res)
 }
