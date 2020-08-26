@@ -7,17 +7,14 @@
 ```bash
 cd server
 go run server.go
-# switch another terminal
-go run httpserver.go
 ```
-* POST正常查询：
+* 启动客户端
 ```bash
-curl -H "Content-Type: application/json" -X POST -d '{"order_id":34,"order_no":"bj00123456","user_id":8901,"order_money":34.12,"order_details":[{"detail_id":101,"order_no":"bj30987","prod_id":789},{"detail_id":102,"order_no":"bj30988","prod_id":790}]}' "http://localhost:8080/v1/orders"
+cd client
+go run main.go
 ```
-响应：
+
+客户端响应：
 ```bash
-{
-    "status": "OK",
-    "message": "success"
-}
+[user_id:1 user_score:101  user_id:2 user_score:102  user_id:3 user_score:103  user_id:4 user_score:104  user_id:5 user_score:105 ]
 ```
