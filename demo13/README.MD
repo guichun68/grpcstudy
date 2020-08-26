@@ -2,9 +2,6 @@
 -- gateway实现api/http
 
 
-
-
-
 * 启动服务端
 ```bash
 cd server
